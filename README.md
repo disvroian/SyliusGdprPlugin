@@ -22,15 +22,3 @@
     ```php
     $ Eknow\SyliusGdprPlugin\EknowSyliusGdprPlugin::class => ['all' => true],
     ```
-4. Run the following command to validate it works
-
-    ```bash
-    $ php bin/console list
-    ```
-Result will be an list of command such as
-
-    ```bash
-    $ sylius:admin:create                     Create an admin user for the backend
-    $ sylius:admin:delete                     Delete the admin user on backend with his ID
-    $ sylius:cart:abandonned                  Clean all abandonned carts.
-    ```
