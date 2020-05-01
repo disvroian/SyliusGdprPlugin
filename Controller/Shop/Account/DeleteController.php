@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1) ;
 
-namespace Eknow\GdprPlugin\Controller\Shop\Account ;
+namespace Eknow\SyliusGdprPlugin\Controller\Shop\Account ;
 
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\HttpFoundation\File\MimeType\FileinfoMimeTypeGuesser;
 
-use Eknow\GdprPlugin\Provider\LoggedInUserProviderInterface ;
+use Eknow\SyliusGdprPlugin\Provider\LoggedInUserProviderInterface ;
 use Sylius\Component\Core\Repository\CustomerRepositoryInterface;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

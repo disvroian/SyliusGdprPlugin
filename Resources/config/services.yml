@@ -1,17 +1,16 @@
 parameters:
-  configCustomerCanDeleteIsAccount: 0
-  configCustomerExport: 0
-  pathAdmin: "sylius_admin"
+  configCustomerCanDeleteIsAccount: 1
+  configCustomerExport: 1
 services:
 # MISC
   eknow_gdpr_plugin.provider.logged_in_user:
-    class: Eknow\GdprPlugin\Provider\LoggedInUserProvider
+    class: Eknow\SyliusGdprPlugin\Provider\LoggedInUserProvider
     arguments:
         - '@security.token_storage'
 
 # CONTROLLER
   eknow_gdpr_plugin.controller.shop.account.delete:
-    class: Eknow\GdprPlugin\Controller\Shop\Account\DeleteController
+    class: Eknow\SyliusGdprPlugin\Controller\Shop\Account\DeleteController
     arguments:
       - ["%configCustomerCanDeleteIsAccount%"]
       - "@eknow_gdpr_plugin.provider.logged_in_user"
@@ -19,14 +18,14 @@ services:
     tags:
         - { name: controller.service_arguments }
   eknow_gdpr_plugin.controller.shop.account.extract.personal:
-    class: Eknow\GdprPlugin\Controller\Shop\Account\ExportPersonalDataController
+    class: Eknow\SyliusGdprPlugin\Controller\Shop\Account\ExportPersonalDataController
     arguments:
       - "@eknow_gdpr_plugin.provider.logged_in_user"
       - "@sylius.repository.customer"
     tags:
         - { name: controller.service_arguments }
   eknow_gdpr_plugin.controller.shop.account.index:
-    class: Eknow\GdprPlugin\Controller\Shop\Account\IndexController
+    class: Eknow\SyliusGdprPlugin\Controller\Shop\Account\IndexController
     arguments:
       - ["%configCustomerCanDeleteIsAccount%"]
       - ["%configCustomerExport%"]
@@ -37,10 +36,10 @@ services:
 
 # MENU
   eknow_gdpr_plugin.menu.menu_builder.main:
-    class: Eknow\GdprPlugin\Menu\AdminMenuBuilder
+    class: Eknow\SyliusGdprPlugin\Menu\AdminMenuBuilder
     tags:
         - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
   eknow_gdpr_plugin.menu.account_builder.main:
-      class: Eknow\GdprPlugin\Menu\AccountMenuBuilder
+      class: Eknow\SyliusGdprPlugin\Menu\AccountMenuBuilder
       tags:
           - { name: kernel.event_listener, event: sylius.menu.shop.account, method: addAccountMenuItems }

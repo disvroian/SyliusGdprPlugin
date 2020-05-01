@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Eknow\GdprPlugin\Provider;
+namespace Eknow\SyliusGdprPlugin\Provider;
 
 use Sylius\Component\Core\Model\ShopUserInterface;
 

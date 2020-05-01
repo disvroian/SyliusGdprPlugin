@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Eknow\GdprPlugin\DependencyInjection;
+namespace Eknow\SyliusGdprPlugin\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-final class EknowGdprExtension extends Extension
+final class EknowSyliusGdprExtension extends Extension
 {
     /**
      * @param array<mixed> $config

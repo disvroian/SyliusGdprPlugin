@@ -6,12 +6,12 @@ declare(strict_types=1);
 // Export Orders auto+request
 // Consent
 
-namespace Eknow\GdprPlugin;
+namespace Eknow\SyliusGdprPlugin;
 
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class EknowGdprPlugin extends Bundle
+final class EknowSyliusGdprPlugin extends Bundle
 {
     use SyliusPluginTrait;
 }

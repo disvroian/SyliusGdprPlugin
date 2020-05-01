@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1) ;
 
-namespace Eknow\GdprPlugin\Controller\Shop\Account ;
+namespace Eknow\SyliusGdprPlugin\Controller\Shop\Account ;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,7 +14,7 @@ final class IndexController extends Controller
   private $configCustomerExport= 0 ; //false per default
 
   public function __construct(
-            $configCustomerCanDeleteIsAccount
+            $configCustomerCanDeleteIsAccount,
             $configCustomerExport)
   {
     $this->configCustomerCanDeleteIsAccount= $configCustomerCanDeleteIsAccount[0] ;
@@ -24,9 +24,9 @@ final class IndexController extends Controller
   public function indexAction(Request $request): Response
   {
       return $this->render(
-                  '@EknowGdprPlugin/Shop/Account/index.html.twig',
+                  '@EknowSyliusGdprPlugin/Shop/Account/index.html.twig',
                   [
-                    'configCustomerCanDeleteIsAccount'=> $this->configCustomerCanDeleteIsAccount
+                    'configCustomerCanDeleteIsAccount'=> $this->configCustomerCanDeleteIsAccount,
                     'configCustomerExport'=> $this->configCustomerExport
                   ]);
   }

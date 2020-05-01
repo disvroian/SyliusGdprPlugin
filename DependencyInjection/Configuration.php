@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Eknow\GdprPlugin\DependencyInjection;
+namespace Eknow\SyliusGdprPlugin\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

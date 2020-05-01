@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1) ;
 
-namespace Eknow\GdprPlugin\Menu ;
+namespace Eknow\SyliusGdprPlugin\Menu ;
 
 use Sylius\Bundle\UiBundle\Menu\Event\MenuBuilderEvent;
 
