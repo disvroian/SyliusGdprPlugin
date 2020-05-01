@@ -1,0 +1,36 @@
+{% extends '@SyliusShop/Account/layout.html.twig' %}
+
+{% block breadcrumb %}
+    {% include '@EknowGdprPlugin/Shop/Account/_breadcrumb.html.twig' %}
+{% endblock %}
+
+{% block subcontent %}
+  {% include '@EknowGdprPlugin/Shop/Account/_header.html.twig' %}
+  <div class="ui segment">
+    <h2 class="ui header">
+        {{ 'eknow_gdpr_plugin.ui.gdpr_title_extract'|trans }}
+        <div class="sub header">{{ 'eknow_gdpr_plugin.ui.gdpr_sub_title'|trans }}</div>
+    </h2>
+
+    <div style="margin-top: 1rem; text-align: center; width: 100%">
+        <a href="{{ path('eknow_gdpr_plugin_controller_delete') }}" class="eknow-remove-account ui icon labeled button red" data-product-name="">
+            <i class="icon warning"></i>
+            {{ 'eknow_gdpr_plugin.ui.remove_account'|trans }}
+        </a>
+    </div>
+  </div>
+
+  <div class="ui segment">
+    <h2 class="ui header">
+        {{ 'eknow_gdpr_plugin.ui.gdpr_title_remove'|trans }}
+        <div class="sub header">{{ 'eknow_gdpr_plugin.ui.gdpr_sub_title'|trans }}</div>
+    </h2>
+    <div style="margin-top: 1rem; text-align: center; width: 100%">
+        <a href="{{ path('eknow_gdpr_plugin_controller_delete') }}" class="eknow-remove-account ui icon labeled button red" data-product-name="">
+            <i class="icon warning"></i>
+            {{ 'eknow_gdpr_plugin.ui.remove_account'|trans }}
+        </a>
+    </div>
+  </div>
+
+{% endblock %}

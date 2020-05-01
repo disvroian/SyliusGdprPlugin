@@ -1,0 +1,21 @@
+eknow_gdpr_plugin_controller_delete:
+  path: /{_locale}/account/delete
+  defaults:
+      _controller: eknow_gdpr_plugin.controller.shop.account.delete
+      name: ~
+eknow_gdpr_plugin_controller_export_personal:
+  path: /{_locale}/account/export/personal
+  defaults:
+      _controller: eknow_gdpr_plugin.controller.shop.account.extract.personal
+      _format: json
+      name: ~
+
+sylius_shop_account_gdpr:
+  path: /{_locale}/account/legal
+  methods: [GET]
+  defaults:
+      _controller: eknow_gdpr_plugin.controller.shop.account.index:indexAction
+      arguments:
+        - ['%configCustomerCanDeleteIsAccount%']
+      _sylius:
+          template: "@EknowGdprPlugin/Shop/Account/account_gdpr.html.twig"

@@ -1,0 +1,12 @@
+eknow_gdpr_plugin:
+  ui:
+    gdpr_title: "Legal Datas"
+    gdpr_sub_title: ""
+    gdpr_title_extract: "Extract my datas"
+    gdpr_sub_title_extract: "You can extract your personal data and orders data"
+    export-personal: "Export Personal Data"
+    export-orders: "Export Orders Data"
+    gdpr_title_remove: "Delete my account"
+    gdpr_sub_title_delete: "You can here delete your account"
+    delete_not_allowed: "You are not allowed to delete your account. Please contact us"
+    remove_account: "Delete your account"
